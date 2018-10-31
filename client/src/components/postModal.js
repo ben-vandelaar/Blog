@@ -12,7 +12,6 @@ import {
 import { connect } from 'react-redux';
 import { addPost } from '../actions/postActions';
 
-import uuid from 'uuid'
 
 class PostModal extends React.Component {
     state = {
@@ -34,7 +33,6 @@ class PostModal extends React.Component {
         e.preventDefault();
 
         const newPost = {
-            id: uuid(),
             title: this.state.title,
             body: this.state.body
         }
