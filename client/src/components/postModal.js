@@ -34,7 +34,8 @@ class PostModal extends React.Component {
 
         const newPost = {
             title: this.state.title,
-            body: this.state.body
+            body: this.state.body,
+            image: this.state.image
         }
 
         //Add post via Action
@@ -70,7 +71,15 @@ class PostModal extends React.Component {
                                     placeholder="Post title"
                                     onChange={this.onChange}
                                 />
-                                <Label for="title"><h3>Post</h3></Label>
+                                <Label for="title"><h3>Image</h3></Label>
+                                <Input
+                                    type="text"
+                                    name="image"
+                                    id="post"
+                                    placeholder="URL"
+                                    onChange={this.onChange}
+                                />
+                                <Label for="title"><h3>Body</h3></Label>
                                 <Input
                                     type="textarea"
                                     name="body"
