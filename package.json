@@ -11,7 +11,8 @@
     "server": "nodemon ./server/server.js --watch",
     "test": "jest --watchAll",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"yarn server\" \" yarn client\""
+    "dev": "concurrently \"yarn server\" \" yarn client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn add --prefix client && yarn build --prefix client"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
